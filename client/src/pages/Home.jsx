@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation } from 'swiper/modules'
@@ -22,7 +22,7 @@ export default function Home() {
                 setOfferListings(data);
                 fetchRentListings();
             } catch (error) {
-                console.log(error)
+                console.log(error);
             }
         };
 
@@ -34,7 +34,7 @@ export default function Home() {
                 setRentListings(data);
                 fetchSaleListings();
             } catch (error) {
-                console.log(error)
+                console.log(error);
             }
         };
 
@@ -45,13 +45,11 @@ export default function Home() {
                 const data = await res.json();
                 setSaleListings(data);
             } catch (error) {
-                console.log(error)
+                console.log(error);
             }
         };
         fetchOfferListings();
     }, []);
-
-    console.log(offerListings)
 
     return (
         <div>

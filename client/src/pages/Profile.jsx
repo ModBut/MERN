@@ -36,7 +36,6 @@ export default function Profile() {
         if (file) {
             handleFileUpload(file);
         }
-
     }, [file]);
 
     const handleFileUpload = (file) => {
